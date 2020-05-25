@@ -5,7 +5,9 @@ const express = require('express'),
       hbs = require('hbs')
       helpers = require('./hbs/helpers')
 
+
 // MIDDLEWARES
+const port = process.env.PORT || app.set('port', 9000)
 app.set('port', 9000)
 app.use( express.static( __dirname + '/public' ) )
 
