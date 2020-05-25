@@ -1,0 +1,29 @@
+{
+  "name": "webserver",
+  "version": "0.0.1",
+  "description": "WebServer Creado con NodeJs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarioRicardoPineda/webserver-with-nodejs.git"
+  },
+  "keywords": [
+    "Webserver"
+  ],
+  "author": "Ricardo Pineda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarioRicardoPineda/webserver-with-nodejs/issues"
+  },
+  "homepage": "https://github.com/MarioRicardoPineda/webserver-with-nodejs#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "colors": "^1.4.0",
+    "nodemon": "^2.0.4"
+  }
+}
