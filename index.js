@@ -1,24 +1,33 @@
 
 const express = require('express'),
       app = express(),
-      color = require('colors')
+      color = require('colors'),
+      hbs = require('hbs')
+      helpers = require('./hbs/helpers')
 
 // MIDDLEWARES
 app.set('port', 9000)
 app.use( express.static( __dirname + '/public' ) )
 
+// Expres Engine
+app.set('view engine', 'hbs')
+hbs.registerPartials( __dirname + '/views/partials')
 
 // ROUTING  
-// app.get('/', (req, res) => {
+app.get('/', (req, res) => {
 
-//   let salida = {
-//     nombre: 'Ricardo',
-//     edad: 23,
-//     url: req.url
-//   }
+  res.render('index', {
+    nombre: 'Ricardo'
+  })
 
-//   res.json(salida)
+})
+app.get('/about', (req, res) => {
 
-// })
+  res.render('about', {
+    nombre: 'Ricardo',
+    imgURL: 'assets/img/quiz-home.svg'
+  })
+
+})
 
 app.listen( app.get( 'port' ) , console.log( `Ejecutandose en el puerto ${ app.get( 'port' ) }`.brightYellow ))

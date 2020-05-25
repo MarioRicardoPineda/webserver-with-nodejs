@@ -4,7 +4,7 @@
   "description": "WebServer Creado con NodeJs",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon"
+    "dev": "nodemon index -e js,hbs,html,css"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,8 @@
   },
   "homepage": "https://github.com/MarioRicardoPineda/webserver-with-nodejs#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "hbs": "^4.1.1"
   },
   "devDependencies": {
     "colors": "^1.4.0",
