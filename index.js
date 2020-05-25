@@ -3,8 +3,12 @@ const express = require('express'),
       app = express(),
       color = require('colors')
 
-app.set('port', 4000)
+// MIDDLEWARES
+app.set('port', 9000)
+app.use( express.static( __dirname + '/public' ) )
 
+
+// ROUTING  
 app.get('/', (req, res) => {
 
   let salida = {
