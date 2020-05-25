@@ -9,16 +9,16 @@ app.use( express.static( __dirname + '/public' ) )
 
 
 // ROUTING  
-app.get('/', (req, res) => {
+// app.get('/', (req, res) => {
 
-  let salida = {
-    nombre: 'Ricardo',
-    edad: 23,
-    url: req.url
-  }
+//   let salida = {
+//     nombre: 'Ricardo',
+//     edad: 23,
+//     url: req.url
+//   }
 
-  res.json(salida)
+//   res.json(salida)
 
-})
+// })
 
 app.listen( app.get( 'port' ) , console.log( `Ejecutandose en el puerto ${ app.get( 'port' ) }`.brightYellow ))
