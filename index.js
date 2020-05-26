@@ -7,8 +7,8 @@ const express = require('express'),
 
 
 // MIDDLEWARES
-const port = process.env.PORT || app.set('port', 9000)
 app.set('port', 9000)
+const port = process.env.PORT || app.get('port')
 app.use( express.static( __dirname + '/public' ) )
 
 // Expres Engine
@@ -32,4 +32,4 @@ app.get('/about', (req, res) => {
 
 })
 
-app.listen( app.get( 'port' ) , console.log( `Ejecutandose en el puerto ${ app.get( 'port' ) }`.brightYellow ))
+app.listen( port , console.log( `Ejecutandose en el puerto ${ port }`.brightYellow ))
