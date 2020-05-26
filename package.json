@@ -4,6 +4,7 @@
   "description": "WebServer Creado con NodeJs",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "dev": "nodemon index -e js,hbs,html,css"
   },
   "repository": {
